@@ -1,0 +1,1559 @@
+{
+  "meta": {
+    "lastUpdated": "2026-11-14",
+    "lastBatch": [],
+    "note": "Edit ideas here, then run: python3 build.py. lastBatch = ids added in the latest weekly update (shown as New)."
+  },
+  "categories": [
+    "AI",
+    "Health",
+    "Finance",
+    "Education",
+    "E-commerce",
+    "Local Business",
+    "Creator",
+    "Productivity",
+    "Agriculture",
+    "Energy & EV",
+    "Islamic Tech",
+    "Privacy",
+    "Lifestyle"
+  ],
+  "trends": [
+    {
+      "label": "Urdu voice agents",
+      "stage": 0.07,
+      "demand": 5,
+      "query": "voice"
+    },
+    {
+      "label": "AI-search readiness",
+      "stage": 0.14,
+      "demand": 4,
+      "query": "AI search"
+    },
+    {
+      "label": "Voice-clone scam defense",
+      "stage": 0.1,
+      "demand": 5,
+      "query": "scam"
+    },
+    {
+      "label": "EV charging",
+      "stage": 0.2,
+      "demand": 3,
+      "query": "EV"
+    },
+    {
+      "label": "Elder care tech",
+      "stage": 0.22,
+      "demand": 4,
+      "query": "elder"
+    },
+    {
+      "label": "Halal fintech",
+      "stage": 0.32,
+      "demand": 3,
+      "query": "halal"
+    },
+    {
+      "label": "Rooftop solar services",
+      "stage": 0.38,
+      "demand": 5,
+      "query": "solar"
+    },
+    {
+      "label": "COD fraud tools",
+      "stage": 0.3,
+      "demand": 4,
+      "query": "COD"
+    },
+    {
+      "label": "WhatsApp commerce bots",
+      "stage": 0.46,
+      "demand": 5,
+      "query": "WhatsApp"
+    },
+    {
+      "label": "UGC marketplaces",
+      "stage": 0.48,
+      "demand": 3,
+      "query": "UGC"
+    },
+    {
+      "label": "AI video dubbing",
+      "stage": 0.55,
+      "demand": 4,
+      "query": "dubbing"
+    },
+    {
+      "label": "AI product photos",
+      "stage": 0.6,
+      "demand": 4,
+      "query": "photo"
+    },
+    {
+      "label": "AI exam tutors",
+      "stage": 0.66,
+      "demand": 5,
+      "query": "tutor"
+    },
+    {
+      "label": "AI caption writers",
+      "stage": 0.82,
+      "demand": 4,
+      "query": "caption"
+    },
+    {
+      "label": "Review auto-replies",
+      "stage": 0.88,
+      "demand": 3,
+      "query": "reviews"
+    },
+    {
+      "label": "Async video tools",
+      "stage": 0.93,
+      "demand": 2,
+      "query": "standup"
+    }
+  ],
+  "validation": [
+    {
+      "day": "Day 1",
+      "task": "Write a one-sentence promise and make a simple landing page."
+    },
+    {
+      "day": "Day 2",
+      "task": "Post in 5 groups or communities where your audience hangs out."
+    },
+    {
+      "day": "Day 3",
+      "task": "DM or call 10 target users — ask about the problem, not your idea."
+    },
+    {
+      "day": "Day 4",
+      "task": "Run a tiny ad test ($10–20) to the landing page."
+    },
+    {
+      "day": "Day 5",
+      "task": "Offer a pre-sale, deposit or waitlist spot."
+    },
+    {
+      "day": "Day 6",
+      "task": "Measure: aim for ~10% sign-ups or 3+ people willing to pay."
+    },
+    {
+      "day": "Day 7",
+      "task": "Decide: build, pivot the angle, or drop it."
+    }
+  ],
+  "ideas": [
+    {
+      "id": 1,
+      "slug": "urdu-voice-ai-receptionist",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Urdu Voice AI Receptionist",
+      "pitch": "An AI that answers clinic and shop phone calls in Urdu, books appointments and sends WhatsApp confirmations.",
+      "type": "Web Tool",
+      "cat": "AI",
+      "gap": 91,
+      "dem": 5,
+      "comp": 1,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "early",
+      "pk": true,
+      "why": "Realtime voice AI now handles Urdu speech well, and API costs per minute keep falling.",
+      "problem": "Small clinics and shops miss many calls because the line is busy or nobody is free to answer.",
+      "audience": "Clinics, labs, salons, restaurants and real-estate offices.",
+      "solution": "A virtual number + voice agent that understands Urdu/Punjabi, answers FAQs, books slots in a calendar and sends a WhatsApp confirmation.",
+      "whyGap": "Global voice-AI startups focus on English; local telecom setup and Urdu tuning keep them away.",
+      "money": [
+        "Monthly subscription per line",
+        "Per-minute usage above plan",
+        "One-time setup fee"
+      ],
+      "stack": "Realtime voice LLM API, Twilio / local SIP, Node.js, Supabase, WhatsApp Cloud API",
+      "mvp": [
+        "One virtual number per business",
+        "Urdu greeting + FAQ answers",
+        "Booking into Google Calendar",
+        "WhatsApp confirmation message",
+        "Call log dashboard"
+      ],
+      "risks": [
+        "Telecom/SIP setup locally",
+        "Accuracy with noise and accents",
+        "Per-minute API cost"
+      ],
+      "channels": [
+        "Walk-in demos to 20 clinics",
+        "Doctor Facebook groups",
+        "Referral discount"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "pharmacy-expiry-and-reorder-bot",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Pharmacy Expiry & Reorder Bot",
+      "pitch": "A WhatsApp bot that flags near-expiry stock and auto-drafts reorders to distributors.",
+      "type": "Web Tool",
+      "cat": "Local Business",
+      "gap": 86,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 3,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "WhatsApp Cloud API is cheap now and most pharmacies already run supplier orders on WhatsApp.",
+      "problem": "Pharmacies lose money on expired medicines and run out of fast movers because tracking is manual.",
+      "audience": "Independent pharmacies, medical stores and small warehouses.",
+      "solution": "Upload a stock sheet or connect POS; the bot sends daily expiry alerts and one-tap reorder messages to the right distributor.",
+      "whyGap": "Big POS vendors sell bulky software; nobody offers a simple WhatsApp-first add-on.",
+      "money": [
+        "Monthly subscription",
+        "Paid POS integration",
+        "Distributor-sponsored listings"
+      ],
+      "stack": "WhatsApp Cloud API, Python/FastAPI, Google Sheets API, PostgreSQL",
+      "mvp": [
+        "Excel/CSV stock import",
+        "Expiry alerts 30/60/90 days",
+        "Low-stock alerts",
+        "Reorder message templates",
+        "Weekly loss-saved report"
+      ],
+      "risks": [
+        "Messy stock data",
+        "Low willingness to pay at first"
+      ],
+      "channels": [
+        "Pharmacy associations",
+        "Distributor partnerships",
+        "Door-to-door demos"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "cod-fake-order-shield",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "COD Fake-Order Shield",
+      "pitch": "A risk score for every cash-on-delivery order so online stores stop paying for fake and refused parcels.",
+      "type": "Web Tool",
+      "cat": "E-commerce",
+      "gap": 89,
+      "dem": 5,
+      "comp": 2,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "early",
+      "pk": true,
+      "why": "COD is still dominant and refused parcels eat courier fees as order volume grows.",
+      "problem": "Stores lose courier charges and stock time on fake, prank or impulse COD orders.",
+      "audience": "Shopify and WooCommerce stores selling on COD.",
+      "solution": "A plugin that scores each order (phone history, address quality, past refusals across a shared network) and auto-asks risky buyers to confirm on WhatsApp.",
+      "whyGap": "Fraud tools are built for card payments; COD-heavy markets are ignored.",
+      "money": [
+        "Per-order pricing",
+        "Monthly plans by volume",
+        "Courier partnerships"
+      ],
+      "stack": "Shopify app + WooCommerce plugin, Node.js, Redis, WhatsApp API",
+      "mvp": [
+        "Order risk score 0–100",
+        "WhatsApp confirm/cancel flow",
+        "Blacklist of repeat refusers",
+        "Dashboard of money saved"
+      ],
+      "risks": [
+        "Privacy compliance",
+        "Network effect needs many stores"
+      ],
+      "channels": [
+        "Seller Facebook groups",
+        "Courier company partnership",
+        "Free tier for small stores"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "roman-urdu-caption-and-script-writer",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Roman Urdu Caption & Script Writer",
+      "pitch": "Write viral captions, reels scripts and ad copy in natural Roman Urdu and Urdu in seconds.",
+      "type": "Web Tool",
+      "cat": "Creator",
+      "gap": 78,
+      "dem": 5,
+      "comp": 3,
+      "diff": 1,
+      "weeks": 2,
+      "budget": "Low",
+      "status": "hot",
+      "pk": true,
+      "why": "LLMs now write fluent Roman Urdu, and short-video creators post daily.",
+      "problem": "Generic AI tools sound robotic in Roman Urdu and miss local slang and humour.",
+      "audience": "Creators, small brands, social media managers.",
+      "solution": "Templates for hooks, captions, scripts and ads tuned with local examples, tone sliders and trending hashtags.",
+      "whyGap": "English-first tools don't invest in local tone; this needs local taste.",
+      "money": [
+        "Freemium credits",
+        "Monthly Pro plan",
+        "Agency seats"
+      ],
+      "stack": "Next.js, LLM API, Stripe/local payments, Supabase",
+      "mvp": [
+        "10 content templates",
+        "Tone: funny / formal / desi",
+        "Hashtag suggestions",
+        "Copy & history"
+      ],
+      "risks": [
+        "Low switching cost",
+        "Big tools may add Urdu"
+      ],
+      "channels": [
+        "TikTok demos",
+        "Creator collabs",
+        "Free caption generator page for SEO"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "halal-psx-stock-screener",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Halal PSX Stock Screener",
+      "pitch": "A simple app that shows which listed stocks pass common Shariah screens, with plain-language reasons.",
+      "type": "App",
+      "cat": "Islamic Tech",
+      "gap": 82,
+      "dem": 4,
+      "comp": 2,
+      "diff": 3,
+      "weeks": 8,
+      "budget": "Medium",
+      "status": "early",
+      "pk": true,
+      "why": "Mobile retail investing is growing and Shariah screening info is scattered in PDFs.",
+      "problem": "Muslim investors can't easily check if a stock is compliant or why.",
+      "audience": "New retail investors who want halal options.",
+      "solution": "A screener that applies published screening ratios, shows pass/fail with reasons and alerts when status changes. Information only, not advice.",
+      "whyGap": "Brokers show prices, not compliance; Islamic indexes aren't user-friendly.",
+      "money": [
+        "Freemium",
+        "Premium alerts",
+        "Broker affiliate"
+      ],
+      "stack": "Flutter, Python data pipeline, Firebase",
+      "mvp": [
+        "Stock list with status",
+        "Ratio breakdown",
+        "Watchlist",
+        "Change alerts"
+      ],
+      "risks": [
+        "Data accuracy",
+        "Scholar review needed",
+        "Must avoid giving investment advice"
+      ],
+      "channels": [
+        "Islamic finance communities",
+        "YouTube explainers",
+        "Masjid/university talks"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "voice-call-medicine-reminder-for-elders",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Voice-Call Medicine Reminder for Elders",
+      "pitch": "Automated Urdu voice calls remind elderly parents to take medicine — family gets alerted if missed.",
+      "type": "Service",
+      "cat": "Health",
+      "gap": 84,
+      "dem": 4,
+      "comp": 1,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Many elders don't use apps, but they always pick up a phone call.",
+      "problem": "Children (often overseas) worry their parents miss medicines; apps don't work for non-tech elders.",
+      "audience": "Overseas families and working children of elderly parents.",
+      "solution": "Schedule reminders; the system calls with a familiar voice message, parent presses 1 to confirm, family gets a WhatsApp summary.",
+      "whyGap": "Health apps assume smartphone skills; voice-call services are rare.",
+      "money": [
+        "Monthly per-parent plan",
+        "Family bundles",
+        "Clinic white-label"
+      ],
+      "stack": "Twilio / local voice gateway, Node.js, WhatsApp API, Supabase",
+      "mvp": [
+        "Reminder scheduler",
+        "Press-1 confirmation",
+        "Missed-dose alert to family",
+        "Weekly report"
+      ],
+      "risks": [
+        "Call delivery costs",
+        "Not a medical service — keep it reminders only"
+      ],
+      "channels": [
+        "Overseas Pakistani groups",
+        "Facebook ads in Gulf/UK",
+        "Pharmacy partnerships"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "crop-doctor-on-whatsapp",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Crop Doctor on WhatsApp",
+      "pitch": "Farmers send a photo of a sick plant and get the likely problem and next steps as a Punjabi/Urdu voice note.",
+      "type": "App",
+      "cat": "Agriculture",
+      "gap": 80,
+      "dem": 4,
+      "comp": 2,
+      "diff": 3,
+      "weeks": 8,
+      "budget": "Medium",
+      "status": "early",
+      "pk": true,
+      "why": "Vision AI can now recognise common plant diseases from phone photos.",
+      "problem": "Small farmers rely on guesswork or dealers who push products.",
+      "audience": "Small and medium farmers, agri dealers.",
+      "solution": "WhatsApp bot: photo in → likely issue, confidence, and practical steps out, in a voice note. Escalate to a human agronomist for a fee.",
+      "whyGap": "Agri apps are text-heavy English apps; farmers prefer WhatsApp voice.",
+      "money": [
+        "Paid expert consult",
+        "Agri company sponsorship",
+        "Dealer subscriptions"
+      ],
+      "stack": "WhatsApp API, vision model API, TTS in Urdu/Punjabi, Python",
+      "mvp": [
+        "Top 5 crops covered",
+        "Photo diagnosis",
+        "Voice note reply",
+        "Human expert handoff"
+      ],
+      "risks": [
+        "Wrong diagnosis liability",
+        "Farmer trust"
+      ],
+      "channels": [
+        "Agri dealers",
+        "Village WhatsApp groups",
+        "Radio/YouTube farming shows"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "freelancer-income-tracker",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Freelancer Income Tracker",
+      "pitch": "Track Upwork, Fiverr and Payoneer income, convert to local currency and get a tax-ready yearly summary.",
+      "type": "App",
+      "cat": "Finance",
+      "gap": 75,
+      "dem": 4,
+      "comp": 3,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "hot",
+      "pk": true,
+      "why": "Freelancer numbers keep growing and tax filing for remittances is now a common pain.",
+      "problem": "Freelancers track income in messy sheets and panic at tax time.",
+      "audience": "Freelancers and small remote agencies.",
+      "solution": "Log or import payouts, auto-convert at the day's rate, create invoices and export a yearly summary.",
+      "whyGap": "Global tools ignore local tax and payout methods.",
+      "money": [
+        "Freemium",
+        "Pro yearly plan",
+        "Tax consultant referrals"
+      ],
+      "stack": "Flutter or React Native, Firebase, exchange-rate API",
+      "mvp": [
+        "Income log by platform",
+        "Currency conversion",
+        "Simple invoices",
+        "Yearly PDF summary"
+      ],
+      "risks": [
+        "Tax rules change",
+        "Must avoid tax advice"
+      ],
+      "channels": [
+        "Freelancer Facebook groups",
+        "YouTube tutorials",
+        "Universities"
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "ai-dubbing-for-short-videos",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "AI Dubbing for Short Videos",
+      "pitch": "Dub reels and shorts into Urdu, Punjabi, Pashto or Sindhi with natural voices and lip-sync.",
+      "type": "Web Tool",
+      "cat": "Creator",
+      "gap": 77,
+      "dem": 4,
+      "comp": 3,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "hot",
+      "pk": true,
+      "why": "Voice cloning and lip-sync models got good enough for social video.",
+      "problem": "Creators and brands can't reach regional-language audiences without costly dubbing.",
+      "audience": "Creators, ad agencies, e-learning sellers.",
+      "solution": "Upload a video, choose language, get dubbed output with the creator's cloned voice (with consent) and captions.",
+      "whyGap": "Dubbing tools support major languages; regional ones are missing.",
+      "money": [
+        "Per-minute credits",
+        "Monthly plans",
+        "Agency API"
+      ],
+      "stack": "Speech-to-text, translation LLM, voice TTS API, FFmpeg, Next.js",
+      "mvp": [
+        "Upload & transcribe",
+        "2 regional languages",
+        "Voice + captions output",
+        "Download MP4"
+      ],
+      "risks": [
+        "Voice consent misuse",
+        "GPU/API costs"
+      ],
+      "channels": [
+        "Creator demos",
+        "Agency outreach",
+        "Before/after reels"
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "personal-data-removal-service",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Personal Data Removal Service",
+      "pitch": "Find and remove your phone number and personal details from leak sites, directories and spam lists.",
+      "type": "Service",
+      "cat": "Privacy",
+      "gap": 79,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 3,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Data leaks and spam calls are rising and people feel helpless.",
+      "problem": "People's numbers and details are sold and shared, leading to spam and scams.",
+      "audience": "Professionals, women creators, families.",
+      "solution": "Monitor known directories and leak sources, file removal requests, and send a monthly privacy report.",
+      "whyGap": "Western removal services don't cover local sources.",
+      "money": [
+        "Monthly subscription",
+        "One-time cleanup",
+        "Corporate staff plan"
+      ],
+      "stack": "Python scrapers (legal sources), dashboard in Next.js, email automation",
+      "mvp": [
+        "Exposure scan",
+        "Removal request templates",
+        "Monthly report"
+      ],
+      "risks": [
+        "Limited removal power",
+        "Legal boundaries"
+      ],
+      "channels": [
+        "Privacy explainer videos",
+        "Women safety communities",
+        "Corporate HR"
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "ai-search-readiness-checker",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "AI-Search Readiness Checker",
+      "pitch": "Check if your website can be read and cited by ChatGPT, Claude, Perplexity and Google AI answers — and fix it.",
+      "type": "Web Tool",
+      "cat": "AI",
+      "gap": 85,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 2,
+      "budget": "Low",
+      "status": "early",
+      "pk": false,
+      "why": "AI answer engines now send real traffic; site owners don't know if bots can read them.",
+      "problem": "Businesses lose visibility in AI answers without knowing why.",
+      "audience": "SEO agencies, SaaS sites, bloggers, e-commerce stores.",
+      "solution": "Enter a URL → scan robots rules, llms.txt, schema, page structure → score + auto-generated fixes.",
+      "whyGap": "Classic SEO tools haven't caught up with AI-search signals.",
+      "money": [
+        "Free scan + paid report",
+        "Monthly monitoring",
+        "Agency white-label"
+      ],
+      "stack": "Next.js, headless crawler, LLM API, Stripe",
+      "mvp": [
+        "URL scan",
+        "AI-readiness score",
+        "llms.txt generator",
+        "PDF report"
+      ],
+      "risks": [
+        "Standards still changing",
+        "Big SEO tools may copy"
+      ],
+      "channels": [
+        "SEO communities",
+        "Free tool SEO",
+        "Agency partnerships"
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "verified-home-services-on-whatsapp",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Verified Home Services on WhatsApp",
+      "pitch": "Book a verified plumber, electrician or AC technician with fixed prices — entirely on WhatsApp.",
+      "type": "Service",
+      "cat": "Local Business",
+      "gap": 74,
+      "dem": 5,
+      "comp": 3,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "hot",
+      "pk": true,
+      "why": "Rooftop solar and inverter ACs created huge demand for skilled technicians.",
+      "problem": "Finding a trusted technician at a fair price is hard; apps feel complicated.",
+      "audience": "Urban households in one city to start.",
+      "solution": "WhatsApp booking flow, verified technicians, fixed price list, rating after each job.",
+      "whyGap": "Marketplace apps failed on trust and quality; a tight local, WhatsApp-first model is missing.",
+      "money": [
+        "Commission per job",
+        "Annual maintenance plans",
+        "Technician memberships"
+      ],
+      "stack": "WhatsApp API, Airtable/Supabase, simple admin panel",
+      "mvp": [
+        "5 services in 1 area",
+        "WhatsApp booking",
+        "Technician verification",
+        "Ratings"
+      ],
+      "risks": [
+        "Quality control",
+        "Technician churn"
+      ],
+      "channels": [
+        "Housing society groups",
+        "Flyers",
+        "Repeat-customer discounts"
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "school-fee-and-attendance-notifier",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "School Fee & Attendance Notifier",
+      "pitch": "Small private schools send fee reminders, attendance and results to parents on WhatsApp automatically.",
+      "type": "Web Tool",
+      "cat": "Education",
+      "gap": 81,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Parents live on WhatsApp; low-fee schools still use registers.",
+      "problem": "Schools chase fees manually and parents miss updates.",
+      "audience": "Low and mid-fee private schools, academies.",
+      "solution": "Simple web panel: mark attendance, upload results, auto-send fee reminders with payment links.",
+      "whyGap": "School ERPs are expensive and complex for small schools.",
+      "money": [
+        "Per-student monthly fee",
+        "Setup fee",
+        "SMS/WhatsApp credits"
+      ],
+      "stack": "Laravel or Django, WhatsApp API, local payment gateway",
+      "mvp": [
+        "Student list import",
+        "Attendance marking",
+        "Fee reminders",
+        "Result sharing"
+      ],
+      "risks": [
+        "Low budgets",
+        "Training teachers"
+      ],
+      "channels": [
+        "Principal visits",
+        "School associations",
+        "Free first term"
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "board-exam-ai-tutor",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Board Exam AI Tutor",
+      "pitch": "A Matric/FSc tutor trained on board syllabus and past papers that explains in Urdu or English.",
+      "type": "App",
+      "cat": "Education",
+      "gap": 83,
+      "dem": 5,
+      "comp": 2,
+      "diff": 3,
+      "weeks": 8,
+      "budget": "Medium",
+      "status": "hot",
+      "pk": true,
+      "why": "Students use AI chatbots but get answers that don't match their board's syllabus.",
+      "problem": "Tuition is costly and generic AI doesn't follow local board patterns.",
+      "audience": "Matric and Intermediate students and parents.",
+      "solution": "Chapter-wise tutor, past paper solver, smart quizzes and exam-pattern tips per board.",
+      "whyGap": "Global edtech ignores local boards; local apps are just PDFs.",
+      "money": [
+        "Monthly student plan",
+        "School licences",
+        "Exam-season packs"
+      ],
+      "stack": "Flutter, RAG on syllabus, LLM API, Firebase",
+      "mvp": [
+        "2 subjects, 1 board",
+        "Ask-a-question tutor",
+        "Past paper practice",
+        "Progress tracker"
+      ],
+      "risks": [
+        "Content accuracy",
+        "Cheating concerns"
+      ],
+      "channels": [
+        "TikTok study tips",
+        "Academies",
+        "Exam season ads"
+      ]
+    },
+    {
+      "id": 15,
+      "slug": "solar-health-monitor",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Solar Health Monitor",
+      "pitch": "Know if your rooftop solar is underperforming, get cleaning reminders and book service in one app.",
+      "type": "App",
+      "cat": "Energy & EV",
+      "gap": 80,
+      "dem": 4,
+      "comp": 2,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "early",
+      "pk": true,
+      "why": "A massive rooftop solar boom happened, but owners can't tell if output is dropping.",
+      "problem": "Dust, faults and bad wiring silently reduce solar output and savings.",
+      "audience": "Homes and shops with rooftop solar, solar installers.",
+      "solution": "Connect inverter data (or snap a photo of the inverter screen), compare with expected output, alert on drops, schedule cleaning.",
+      "whyGap": "Inverter apps show raw numbers, not insights or services.",
+      "money": [
+        "Subscription",
+        "Cleaning/service commission",
+        "Installer white-label"
+      ],
+      "stack": "React Native, inverter cloud APIs, OCR, weather API",
+      "mvp": [
+        "Manual/photo reading",
+        "Expected vs actual chart",
+        "Cleaning reminders",
+        "Book a cleaner"
+      ],
+      "risks": [
+        "Many inverter brands",
+        "Data access"
+      ],
+      "channels": [
+        "Solar installers",
+        "Housing societies",
+        "Before/after savings posts"
+      ]
+    },
+    {
+      "id": 16,
+      "slug": "ev-charger-finder",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "EV Charger Finder",
+      "pitch": "Map of every EV charging point with live status, price and booking.",
+      "type": "App",
+      "cat": "Energy & EV",
+      "gap": 72,
+      "dem": 3,
+      "comp": 1,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "EV and e-bike sales are starting and charging info is scattered.",
+      "problem": "EV owners can't find working chargers or know prices.",
+      "audience": "EV and e-bike owners, charging operators.",
+      "solution": "Crowd-sourced charger map, reviews, price info and later in-app booking.",
+      "whyGap": "Market is early — whoever builds the map first owns it.",
+      "money": [
+        "Charger operator listings",
+        "Booking commission",
+        "Ads"
+      ],
+      "stack": "Flutter, Google Maps API, Firebase",
+      "mvp": [
+        "Charger map",
+        "Add a charger",
+        "Reviews & photos"
+      ],
+      "risks": [
+        "Small market today",
+        "Data freshness"
+      ],
+      "channels": [
+        "EV owner groups",
+        "Dealers",
+        "Operators"
+      ]
+    },
+    {
+      "id": 17,
+      "slug": "async-video-standups",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Async Video Standups",
+      "pitch": "Teams record 60-second updates instead of meetings; AI summarises blockers.",
+      "type": "Web Tool",
+      "cat": "Productivity",
+      "gap": 58,
+      "dem": 3,
+      "comp": 4,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "crowded",
+      "pk": false,
+      "why": "Remote teams across time zones want fewer meetings.",
+      "problem": "Daily standups waste time across time zones.",
+      "audience": "Remote startups and agencies.",
+      "solution": "Record short updates, AI writes a summary and flags blockers in Slack.",
+      "whyGap": "Gap is small — tools exist; only a niche angle can win.",
+      "money": [
+        "Per-seat pricing"
+      ],
+      "stack": "Next.js, video recording API, LLM summary, Slack API",
+      "mvp": [
+        "Record update",
+        "AI summary",
+        "Slack post"
+      ],
+      "risks": [
+        "Crowded market",
+        "Hard to differentiate"
+      ],
+      "channels": [
+        "Product Hunt",
+        "Remote work communities"
+      ]
+    },
+    {
+      "id": 18,
+      "slug": "photo-khata",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Photo Khata",
+      "pitch": "Snap a receipt or handwritten bill — it becomes a ledger entry with automatic udhaar reminders.",
+      "type": "App",
+      "cat": "Finance",
+      "gap": 73,
+      "dem": 5,
+      "comp": 4,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "hot",
+      "pk": true,
+      "why": "OCR on handwritten Urdu/English bills is finally usable.",
+      "problem": "Shopkeepers lose money on forgotten credit (udhaar) and messy bills.",
+      "audience": "Kiryana stores, wholesalers, small traders.",
+      "solution": "Photo → entry, customer-wise balances, polite WhatsApp payment reminders.",
+      "whyGap": "Khata apps exist but need manual typing; photo-first is missing.",
+      "money": [
+        "Freemium",
+        "Pro features",
+        "Lending partner referrals"
+      ],
+      "stack": "Flutter, OCR/vision API, Firebase",
+      "mvp": [
+        "Photo to entry",
+        "Customer balances",
+        "WhatsApp reminders"
+      ],
+      "risks": [
+        "Competition from free apps",
+        "OCR errors"
+      ],
+      "channels": [
+        "Market demos",
+        "Distributor networks"
+      ]
+    },
+    {
+      "id": 19,
+      "slug": "urdu-mood-journal",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Urdu Mood Journal",
+      "pitch": "A private journaling app in Urdu/Roman Urdu with gentle prompts and weekly mood insights.",
+      "type": "App",
+      "cat": "Health",
+      "gap": 70,
+      "dem": 3,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Mental wellness awareness is rising among young people, but apps are English-only.",
+      "problem": "People want to reflect privately in their own language.",
+      "audience": "Students and young professionals.",
+      "solution": "Daily prompts, voice journaling, mood tags, weekly insights; links to professional help.",
+      "whyGap": "Wellness apps don't localise language or culture.",
+      "money": [
+        "Freemium",
+        "Premium insights",
+        "Therapist directory listings"
+      ],
+      "stack": "Flutter, local encryption, speech-to-text",
+      "mvp": [
+        "Daily prompt",
+        "Voice/text entry",
+        "Mood chart"
+      ],
+      "risks": [
+        "Sensitive data handling",
+        "Must not claim therapy"
+      ],
+      "channels": [
+        "Instagram wellness creators",
+        "Universities"
+      ]
+    },
+    {
+      "id": 20,
+      "slug": "ugc-creator-marketplace",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "UGC Creator Marketplace",
+      "pitch": "Brands order authentic short product videos from vetted local creators in 72 hours.",
+      "type": "Service",
+      "cat": "Creator",
+      "gap": 76,
+      "dem": 4,
+      "comp": 2,
+      "diff": 3,
+      "weeks": 8,
+      "budget": "Medium",
+      "status": "hot",
+      "pk": true,
+      "why": "User-generated videos outperform polished ads on TikTok and Reels.",
+      "problem": "Small brands can't find reliable creators for affordable UGC ads.",
+      "audience": "D2C brands, online stores, agencies.",
+      "solution": "Curated creator pool, fixed-price packages, brief → video in 72h, escrow payments.",
+      "whyGap": "Global UGC platforms don't serve local brands or payments.",
+      "money": [
+        "Commission per order",
+        "Brand subscriptions"
+      ],
+      "stack": "Webflow/Next.js, Airtable, local payment gateway",
+      "mvp": [
+        "Creator profiles",
+        "3 fixed packages",
+        "Order & delivery flow"
+      ],
+      "risks": [
+        "Quality consistency",
+        "Payment disputes"
+      ],
+      "channels": [
+        "Brand DMs",
+        "Creator communities",
+        "Sample portfolio"
+      ]
+    },
+    {
+      "id": 21,
+      "slug": "ai-model-photos-for-clothing-sellers",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "AI Model Photos for Clothing Sellers",
+      "pitch": "Turn flat-lay or hanger photos of clothes into realistic model photos in minutes.",
+      "type": "Web Tool",
+      "cat": "E-commerce",
+      "gap": 78,
+      "dem": 5,
+      "comp": 3,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "hot",
+      "pk": true,
+      "why": "Image models now keep fabric patterns accurate; photoshoots are expensive.",
+      "problem": "Small clothing brands can't afford models and photoshoots for every design.",
+      "audience": "Instagram and Shopify clothing sellers, especially eastern wear.",
+      "solution": "Upload product photo → choose model style and pose → get store-ready images.",
+      "whyGap": "Global tools don't handle eastern wear (dupattas, embroidery) well.",
+      "money": [
+        "Credits per image",
+        "Monthly plans"
+      ],
+      "stack": "Image generation API, Next.js, cloud storage",
+      "mvp": [
+        "Upload & generate",
+        "5 model styles",
+        "Background options"
+      ],
+      "risks": [
+        "Fabric accuracy",
+        "Model cost"
+      ],
+      "channels": [
+        "Seller groups",
+        "Before/after reels"
+      ]
+    },
+    {
+      "id": 22,
+      "slug": "overseas-property-caretaker",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Overseas Property Caretaker",
+      "pitch": "Rent collection, repairs, tenant checks and monthly video reports for overseas owners.",
+      "type": "Service",
+      "cat": "Local Business",
+      "gap": 82,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Overseas communities keep investing in property back home but can't manage it remotely.",
+      "problem": "Owners abroad face unpaid rent, damage and unreliable relatives or agents.",
+      "audience": "Overseas property owners.",
+      "solution": "Managed service: tenant screening, rent collection, repairs, monthly video + statement.",
+      "whyGap": "Agents sell property but don't manage it professionally.",
+      "money": [
+        "% of monthly rent",
+        "Fixed repair coordination fee"
+      ],
+      "stack": "Simple CRM, WhatsApp, Google Drive reports",
+      "mvp": [
+        "5 properties in 1 city",
+        "Monthly report",
+        "Rent collection"
+      ],
+      "risks": [
+        "Trust building",
+        "Disputes with tenants"
+      ],
+      "channels": [
+        "Overseas Facebook groups",
+        "Referrals"
+      ]
+    },
+    {
+      "id": 23,
+      "slug": "desi-wedding-budget-planner",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Desi Wedding Budget Planner",
+      "pitch": "Plan every function, vendor and payment of a desi wedding — with family sharing.",
+      "type": "App",
+      "cat": "Lifestyle",
+      "gap": 71,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Wedding costs keep rising and families plan across WhatsApp chaos.",
+      "problem": "Budgets blow up because nobody tracks vendors and advances.",
+      "audience": "Families planning weddings.",
+      "solution": "Function-wise budget, vendor list, advance payments, guest list and shared checklist.",
+      "whyGap": "Western wedding apps don't fit multi-day desi weddings.",
+      "money": [
+        "Premium plan",
+        "Vendor listings",
+        "Vendor booking commission"
+      ],
+      "stack": "Flutter, Firebase",
+      "mvp": [
+        "Budget by function",
+        "Vendor & payment tracker",
+        "Shared checklist"
+      ],
+      "risks": [
+        "One-time use",
+        "Vendor onboarding"
+      ],
+      "channels": [
+        "Wedding pages on Instagram",
+        "Vendor partnerships"
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "code-switch-meeting-notes",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Code-Switch Meeting Notes",
+      "pitch": "Meeting notes and action items for conversations that mix Urdu and English.",
+      "type": "Web Tool",
+      "cat": "AI",
+      "gap": 84,
+      "dem": 4,
+      "comp": 2,
+      "diff": 3,
+      "weeks": 6,
+      "budget": "Medium",
+      "status": "early",
+      "pk": true,
+      "why": "Speech models improved on mixed-language audio.",
+      "problem": "Note-taker bots fail when people switch between Urdu and English.",
+      "audience": "Local companies, agencies, government contractors.",
+      "solution": "Record or join meetings, transcribe mixed speech, output clean English notes and tasks.",
+      "whyGap": "Global note-takers optimise for English only.",
+      "money": [
+        "Per-seat subscription",
+        "Enterprise plan"
+      ],
+      "stack": "Speech-to-text API, LLM, Next.js, calendar integrations",
+      "mvp": [
+        "Upload recording",
+        "Mixed-language transcript",
+        "Summary + action items"
+      ],
+      "risks": [
+        "Accuracy",
+        "Data privacy"
+      ],
+      "channels": [
+        "LinkedIn",
+        "Company demos"
+      ]
+    },
+    {
+      "id": 25,
+      "slug": "halal-travel-planner",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Halal Travel Planner",
+      "pitch": "Plan trips with halal food, prayer spaces and family-friendly stays built in.",
+      "type": "Web Tool",
+      "cat": "Islamic Tech",
+      "gap": 68,
+      "dem": 3,
+      "comp": 3,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "hot",
+      "pk": false,
+      "why": "Muslim travel spending is growing and AI planners make itineraries easy.",
+      "problem": "Muslim travellers spend hours checking food, prayer and stay suitability.",
+      "audience": "Muslim families and young travellers.",
+      "solution": "AI itinerary with halal restaurants, mosques and prayer times per stop.",
+      "whyGap": "Travel apps don't filter for these needs well.",
+      "money": [
+        "Affiliate bookings",
+        "Premium itineraries"
+      ],
+      "stack": "Next.js, LLM API, maps/places API",
+      "mvp": [
+        "Destination planner",
+        "Halal food & mosque layer",
+        "Shareable itinerary"
+      ],
+      "risks": [
+        "Data accuracy",
+        "Affiliate dependency"
+      ],
+      "channels": [
+        "Travel creators",
+        "Umrah groups"
+      ]
+    },
+    {
+      "id": 26,
+      "slug": "hifz-progress-tracker-with-audio-check",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Hifz Progress Tracker with Audio Check",
+      "pitch": "Students recite; the app tracks memorisation and flags mistakes for the teacher.",
+      "type": "App",
+      "cat": "Islamic Tech",
+      "gap": 79,
+      "dem": 4,
+      "comp": 2,
+      "diff": 4,
+      "weeks": 12,
+      "budget": "Medium",
+      "status": "early",
+      "pk": true,
+      "why": "Quran recitation recognition models now work on phones.",
+      "problem": "Teachers can't track every student's revision; parents can't see progress.",
+      "audience": "Madrasas, Hifz students, parents.",
+      "solution": "Recite to the app, it marks verses done, flags likely mistakes, teacher dashboard shows progress.",
+      "whyGap": "Existing apps focus on reading, not structured Hifz tracking.",
+      "money": [
+        "Madrasa licences",
+        "Parent subscription"
+      ],
+      "stack": "Flutter, speech model, Firebase",
+      "mvp": [
+        "Verse tracker",
+        "Audio recitation check",
+        "Teacher dashboard"
+      ],
+      "risks": [
+        "Accuracy is critical",
+        "Scholar review"
+      ],
+      "channels": [
+        "Madrasa networks",
+        "Parents' groups"
+      ]
+    },
+    {
+      "id": 27,
+      "slug": "google-reviews-auto-responder",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Google Reviews Auto-Responder",
+      "pitch": "AI replies to every Google review in your brand voice.",
+      "type": "Web Tool",
+      "cat": "Local Business",
+      "gap": 66,
+      "dem": 4,
+      "comp": 4,
+      "diff": 1,
+      "weeks": 2,
+      "budget": "Low",
+      "status": "crowded",
+      "pk": false,
+      "why": "Reviews affect local ranking and AI replies are easy to build.",
+      "problem": "Businesses ignore reviews because replying takes time.",
+      "audience": "Restaurants, clinics, salons.",
+      "solution": "Connect Google Business Profile, approve AI replies with one tap.",
+      "whyGap": "Crowded — win only with a local language or niche angle.",
+      "money": [
+        "Monthly subscription"
+      ],
+      "stack": "Google Business Profile API, LLM, Next.js",
+      "mvp": [
+        "Connect profile",
+        "AI reply drafts",
+        "Approve & post"
+      ],
+      "risks": [
+        "Many competitors"
+      ],
+      "channels": [
+        "Cold outreach to local businesses"
+      ]
+    },
+    {
+      "id": 28,
+      "slug": "urdu-bedtime-story-audio",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Urdu Bedtime Story Audio",
+      "pitch": "New personalised Urdu bedtime stories every night with the child's name and values.",
+      "type": "App",
+      "cat": "Education",
+      "gap": 75,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 4,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Natural Urdu text-to-speech is now possible and parents want less screen time.",
+      "problem": "Parents want Urdu content for kids, but quality audio stories are rare.",
+      "audience": "Parents of children aged 3–10, including diaspora families.",
+      "solution": "Pick values (honesty, sharing) and name → AI story with warm Urdu narration, audio only.",
+      "whyGap": "Kids' audio apps are English-first.",
+      "money": [
+        "Monthly plan",
+        "Story packs"
+      ],
+      "stack": "Flutter, LLM, Urdu TTS, Firebase",
+      "mvp": [
+        "Story generator",
+        "Urdu narration",
+        "Favourites"
+      ],
+      "risks": [
+        "Content safety for kids",
+        "TTS quality"
+      ],
+      "channels": [
+        "Parenting groups",
+        "Diaspora communities"
+      ]
+    },
+    {
+      "id": 29,
+      "slug": "home-chef-tiffin-subscriptions",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Home-Chef Tiffin Subscriptions",
+      "pitch": "Weekly home-cooked meal plans from verified home chefs for offices and students.",
+      "type": "Service",
+      "cat": "E-commerce",
+      "gap": 73,
+      "dem": 4,
+      "comp": 3,
+      "diff": 3,
+      "weeks": 8,
+      "budget": "Medium",
+      "status": "hot",
+      "pk": true,
+      "why": "Food delivery is expensive and people want healthy ghar ka khana.",
+      "problem": "Office workers and hostel students lack affordable home-style food.",
+      "audience": "Office workers, hostel students.",
+      "solution": "Subscription menus, verified kitchens, fixed delivery routes.",
+      "whyGap": "Delivery apps focus on restaurants, not recurring home food.",
+      "money": [
+        "Subscription margin",
+        "Corporate plans"
+      ],
+      "stack": "WhatsApp ordering, Airtable, route planner",
+      "mvp": [
+        "1 area, 3 chefs",
+        "Weekly menu",
+        "WhatsApp subscriptions"
+      ],
+      "risks": [
+        "Food safety",
+        "Delivery logistics"
+      ],
+      "channels": [
+        "Office HR",
+        "Hostels",
+        "Instagram"
+      ]
+    },
+    {
+      "id": 30,
+      "slug": "clinic-queue-token-by-sms",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Clinic Queue Token by SMS",
+      "pitch": "Patients get a token by SMS/WhatsApp and wait outside — they're called when it's their turn.",
+      "type": "Web Tool",
+      "cat": "Health",
+      "gap": 81,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 3,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Crowded waiting rooms frustrate patients and doctors alike.",
+      "problem": "Patients wait hours without knowing their turn.",
+      "audience": "Private clinics, labs, government hospital OPDs.",
+      "solution": "Receptionist issues token on a tablet, patient gets live position and 'you're next' alert.",
+      "whyGap": "Queue systems are costly hardware; a cheap software version is missing.",
+      "money": [
+        "Monthly per clinic",
+        "SMS credits"
+      ],
+      "stack": "Web app (PWA), WhatsApp/SMS API",
+      "mvp": [
+        "Token issue screen",
+        "Live queue page",
+        "Next-turn alert"
+      ],
+      "risks": [
+        "Reception adoption"
+      ],
+      "channels": [
+        "Clinic visits",
+        "Doctor referrals"
+      ]
+    },
+    {
+      "id": 31,
+      "slug": "voice-note-scam-detector",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Voice-Note Scam Detector",
+      "pitch": "Detects AI-cloned voices and scam patterns in voice notes and calls before you send money.",
+      "type": "App",
+      "cat": "Privacy",
+      "gap": 87,
+      "dem": 5,
+      "comp": 1,
+      "diff": 4,
+      "weeks": 12,
+      "budget": "High",
+      "status": "early",
+      "pk": true,
+      "why": "AI voice-clone scams ('beta, I'm in trouble, send money') are spreading fast.",
+      "problem": "Families lose money to fake voice notes from 'relatives'.",
+      "audience": "Families, elderly users, banks.",
+      "solution": "Share a voice note to the app → deepfake likelihood + scam pattern warning + verification tips.",
+      "whyGap": "Detection tech exists in labs but no consumer app in local languages.",
+      "money": [
+        "Freemium",
+        "Bank/telco partnerships",
+        "Family plan"
+      ],
+      "stack": "Audio deepfake detection model, Kotlin/Flutter, cloud inference",
+      "mvp": [
+        "Voice note upload",
+        "Risk score",
+        "Scam script matching"
+      ],
+      "risks": [
+        "False positives",
+        "Model accuracy race"
+      ],
+      "channels": [
+        "News coverage",
+        "Bank awareness campaigns",
+        "Family WhatsApp forwards"
+      ]
+    },
+    {
+      "id": 32,
+      "slug": "shop-ai-agent-for-dms",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Shop AI Agent for DMs",
+      "pitch": "A no-code AI agent that answers Instagram and WhatsApp DMs, takes orders and tracks deliveries.",
+      "type": "Web Tool",
+      "cat": "AI",
+      "gap": 77,
+      "dem": 5,
+      "comp": 3,
+      "diff": 4,
+      "weeks": 12,
+      "budget": "High",
+      "status": "hot",
+      "pk": true,
+      "why": "AI agents can now take actions (create orders, check stock) reliably.",
+      "problem": "Small sellers lose sales by replying late to DMs.",
+      "audience": "Instagram/WhatsApp sellers.",
+      "solution": "Connect catalogue → agent answers price/size questions, creates orders, shares tracking — in Roman Urdu.",
+      "whyGap": "Chatbot builders are complex and English-first.",
+      "money": [
+        "Monthly plan by conversations",
+        "Setup service"
+      ],
+      "stack": "Meta APIs, LLM with tools, Node.js, PostgreSQL",
+      "mvp": [
+        "Catalogue import",
+        "Auto-replies",
+        "Order capture",
+        "Human handoff"
+      ],
+      "risks": [
+        "Meta API policies",
+        "Wrong answers"
+      ],
+      "channels": [
+        "Seller groups",
+        "Free trial",
+        "Agency resellers"
+      ]
+    },
+    {
+      "id": 33,
+      "slug": "lab-report-explainer-in-urdu",
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "title": "Lab Report Explainer in Urdu",
+      "pitch": "Upload a lab report and get plain-Urdu explanations of each term and what to ask your doctor.",
+      "type": "Web Tool",
+      "cat": "Health",
+      "gap": 80,
+      "dem": 4,
+      "comp": 2,
+      "diff": 2,
+      "weeks": 3,
+      "budget": "Low",
+      "status": "early",
+      "pk": true,
+      "why": "Vision AI reads report PDFs/photos, and patients now get reports on WhatsApp.",
+      "problem": "Patients don't understand lab reports and panic before seeing a doctor.",
+      "audience": "Patients and families; labs as partners.",
+      "solution": "Photo/PDF in → each value explained simply, normal range shown, questions for the doctor. Never a diagnosis.",
+      "whyGap": "Labs send raw numbers; health apps are English-only.",
+      "money": [
+        "Lab white-label",
+        "Freemium for users"
+      ],
+      "stack": "Vision LLM API, Next.js, WhatsApp API",
+      "mvp": [
+        "Upload report",
+        "Term-by-term explanation",
+        "Doctor question list"
+      ],
+      "risks": [
+        "Medical liability — keep it educational",
+        "Accuracy"
+      ],
+      "channels": [
+        "Lab partnerships",
+        "Health creators"
+      ]
+    }
+  ]
+}
