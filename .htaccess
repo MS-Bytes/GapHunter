@@ -7,7 +7,7 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteRule ^(_src|_data|\.git|\.github)(/|$) - [F,L]
-RewriteRule ^(build\.py|README\.md)$ - [F,L]
+RewriteRule ^(build\.py|README\.md|INSTRUCTIONS\.txt)$ - [F,L]
 </IfModule>
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/rss+xml application/javascript application/json image/svg+xml application/manifest+json

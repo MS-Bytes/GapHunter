@@ -5,7 +5,7 @@ New ideas are added automatically every Monday.
 
 ## How it works
 - `_data/ideas.json` — all ideas, trends and the validation checklist (the only content file).
-- `_data/config.json` — site URL, name, social links, newsletter form URL.
+- `_data/config.json` — site URL, name, optional social profile links (empty = hidden).
 - `_src/styles.css`, `_src/app.js` — design and front-end code.
 - `build.py` — generates the site: `index.html`, `ideas/<slug>/`, `category/<slug>/`,
   `sitemap.xml`, `feed.xml`, `robots.txt`, `.htaccess`, share images in `og/`.
@@ -30,7 +30,3 @@ Generated files are committed, so the server just serves the repo as-is.
      Webhooks (content type `application/json`, push events).
 3. Enable SSL for the subdomain.
 4. Submit `https://<subdomain>/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
-
-## Newsletter
-Put your Mailchimp/Brevo/ConvertKit form action URL in `config.json → newsletterAction`
-(the email field is named `email`). Empty = demo mode.

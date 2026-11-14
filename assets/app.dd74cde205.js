@@ -109,6 +109,5 @@ var paying=users*conv/100*months,monthly=paying*price,target={p:paying,m:monthly
 $("#submitForm").addEventListener("submit",function(e){e.preventDefault();var t=$("#sTitle").value.trim(),pr=$("#sProb").value.trim();if(!t||!pr)return;
 var i={id:"u"+Date.now(),title:t,problem:pr,type:$("#sType").value,cat:$("#sCat").value,why:$("#sWhy").value.trim(),added:new Date().toISOString().slice(0,10)};
 userIdeas.push(i);store.set("gh_user",userIdeas);grid.insertAdjacentHTML("afterbegin",userCard(i));cards=$$(".card",grid);e.target.reset();S.sort="new";$("#fSort").value="new";apply(true);toast("Idea added 🎉");d.getElementById("explore").scrollIntoView({behavior:"smooth"})});
-var nf=$("#newsForm");if(nf&&!nf.getAttribute("action")){nf.addEventListener("submit",function(e){e.preventDefault();$("#newsMsg").textContent="✅ Thanks! (Demo mode: add your email-service form URL in config.json to start collecting.)";nf.reset()})}
 }
 })();

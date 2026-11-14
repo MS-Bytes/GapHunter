@@ -129,7 +129,5 @@ if(grid){
     var i={id:"u"+Date.now(),title:t,problem:pr,type:$("#sType").value,cat:$("#sCat").value,why:$("#sWhy").value.trim(),added:new Date().toISOString().slice(0,10)};
     userIdeas.push(i);store.set("gh_user",userIdeas);grid.insertAdjacentHTML("afterbegin",userCard(i));cards=$$(".card",grid);e.target.reset();S.sort="new";$("#fSort").value="new";apply(true);toast("Idea added 🎉");d.getElementById("explore").scrollIntoView({behavior:"smooth"})});
 
-  /* newsletter */
-  var nf=$("#newsForm");if(nf&&!nf.getAttribute("action")){nf.addEventListener("submit",function(e){e.preventDefault();$("#newsMsg").textContent="✅ Thanks! (Demo mode: add your email-service form URL in config.json to start collecting.)";nf.reset()})}
 }
 })();

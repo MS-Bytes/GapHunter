@@ -169,6 +169,8 @@ LOGO = ('<span class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24"
 def head(cfg, css, title, desc, path, ogimg, jsonld, extra=""):
     url = cfg["siteUrl"] + path
     og = cfg["siteUrl"] + ogimg
+    # until a real domain is set, keep search engines out so wrong canonical links are never indexed
+    robots = "noindex,follow" if "yourdomain.com" in cfg["siteUrl"] else "index,follow,max-image-preview:large"
     tw = f'<meta name="twitter:site" content="{e(cfg["twitter"])}">' if cfg.get("twitter") else ""
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False, separators=(",", ":"))}</script>' for x in jsonld)
     return f"""<!DOCTYPE html>
@@ -179,7 +181,7 @@ def head(cfg, css, title, desc, path, ogimg, jsonld, extra=""):
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{url}">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="robots" content="{robots}">
 <meta name="theme-color" content="#07060f">
 <meta property="og:type" content="{'article' if path.startswith('/ideas/') else 'website'}">
 <meta property="og:site_name" content="{e(cfg['siteName'])}">
@@ -229,7 +231,7 @@ def footer(cfg, cats, js):
 <div><a href="/" class="logo">{LOGO}{e(cfg['siteName'])}</a><p>Discover what the market needs before it's crowded. New gap ideas every Monday for makers, freelancers and first-time founders.</p></div>
 <div><h2>Explore</h2><a href="/#explore">All ideas</a><a href="/#generator">Idea generator</a><a href="/#radar">Trend radar</a><a href="/#calculator">Revenue calculator</a><a href="/feed.xml">RSS feed</a></div>
 <div><h2>Categories</h2>{catlinks}</div>
-<div><h2>Follow</h2>{social}</div>
+{f"<div><h2>Follow</h2>{social}</div>" if social else ""}
 </div><div class="copy"><span>© {year} {e(cfg['siteName'])}. All rights reserved.</span><span>Ideas and scores are editorial estimates for inspiration — not financial or legal advice.</span></div></div></footer>
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" aria-label="Saved ideas"><div class="drawer-head"><h2 style="font-size:1.1rem">🔖 Saved ideas</h2><button class="icon-btn" id="drawerClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
@@ -406,10 +408,6 @@ def page_index(cfg, db, css, js, cats):
 <button class="btn btn-primary" type="submit" style="justify-content:center">Add my idea</button></form>
 </div></section>
 
-<section id="newsletter" style="padding-top:10px"><div class="wrap"><div class="news glass reveal">
-<span class="eyebrow">Weekly drop</span><h2>Get <span class="grad">new gap ideas</span> every Monday</h2><p>Fresh opportunities, trend signals and launch tactics. No spam.</p>
-<form id="newsForm"{f' action="{e(cfg["newsletterAction"])}" method="post" target="_blank"' if cfg.get('newsletterAction') else ''}><label class="sr" for="newsEmail">Email</label><input type="email" id="newsEmail" name="email" required placeholder="you@email.com" autocomplete="email"><button class="btn btn-primary" type="submit">Subscribe</button></form>
-<p id="newsMsg" style="margin-top:14px;font-size:.88rem" aria-live="polite"></p></div></div></section>
 </main>
 <script type="application/json" id="catIcons">{json.dumps(CAT_ICON, ensure_ascii=False)}</script>
 <script type="application/json" id="genData">{json.dumps(GEN, ensure_ascii=False)}</script>
@@ -434,9 +432,6 @@ def page_idea(cfg, db, css, js, cats, i, prev, nxt, related):
             {"@type": "ListItem", "position": 3, "name": i["title"], "item": cfg["siteUrl"] + url}]},
     ]
     full = cfg["siteUrl"] + url
-    share = html.escape(f"💡 {i['title']} — {i['pitch']} {full}")
-    from urllib.parse import quote
-    sq = quote(f"💡 {i['title']} — {i['pitch']} {full}")
     brief = (f"## {i['title']}\n{i['pitch']}\n\n- Type: {i['type']} | Category: {i['cat']}\n- Gap Score (est.): {i['gap']}/100 | Status: {STATUS[i['status']]}\n"
              f"- MVP time: {weeks_label(i['weeks'])} | Budget: {BUDGETS[i['budget']]}\n- Why now: {i['why']}\n\n**Problem:** {i['problem']}\n**Audience:** {i['audience']}\n"
              f"**Solution:** {i['solution']}\n**Monetization:** {', '.join(i['money'])}\n**Stack:** {i['stack']}\n**MVP:**\n" + "\n".join("- " + m for m in i["mvp"]) + f"\n\nSource: {full}")
@@ -467,8 +462,7 @@ def page_idea(cfg, db, css, js, cats, i, prev, nxt, related):
 </article>
 <aside><div class="block glass" data-id="{i['id']}" data-url="{url}" data-title="{e(i['title'])}" data-type="{e(i['type'])}" data-cat="{e(i['cat'])}" data-gap="{i['gap']}">
 <h2>At a glance</h2>{meters(i)}
-<div class="side-actions"><button class="btn btn-primary" data-copy="#brief" type="button">📋 Copy idea brief</button><button class="btn btn-ghost" data-bm="{i['id']}" data-label="1" type="button">🔖 Save idea</button>
-<a class="btn btn-ghost" href="https://wa.me/?text={sq}" target="_blank" rel="noopener">Share on WhatsApp</a><a class="btn btn-ghost" href="https://twitter.com/intent/tweet?text={sq}" target="_blank" rel="noopener">Post on X</a><a class="btn btn-ghost" href="https://www.linkedin.com/sharing/share-offsite/?url={quote(full)}" target="_blank" rel="noopener">Share on LinkedIn</a></div></div></aside>
+<div class="side-actions"><button class="btn btn-primary" data-copy="#brief" type="button">📋 Copy idea brief</button><button class="btn btn-ghost" data-bm="{i['id']}" data-label="1" type="button">🔖 Save idea</button></div></div></aside>
 </div>
 <section style="padding:10px 0 60px"><h2 style="font-size:1.5rem;margin-bottom:16px">Related ideas</h2><div class="related">{rel}</div>
 <p style="margin-top:22px"><a class="btn btn-primary btn-sm" href="/#explore">Browse all ideas →</a></p></section>
@@ -504,7 +498,7 @@ def page_404(cfg, css, js, cats):
     body = f"""{header(cfg, home=False)}<main id="main"><div class="wrap" style="text-align:center;padding:120px 20px">
 <h1 style="font-size:clamp(3rem,10vw,6rem)" class="grad">404</h1><p style="color:var(--muted);margin:10px 0 24px">This gap is real — the page doesn't exist.</p><a class="btn btn-primary" href="/">Back to all ideas</a></div></main>{footer(cfg, cats, js)}"""
     return head(cfg, css, f"Page not found | {cfg['siteName']}", "Page not found.", "/404.html", "/og/site.jpg", []).replace(
-        '<meta name="robots" content="index,follow,max-image-preview:large">', '<meta name="robots" content="noindex">') + body
+        '<meta name="robots" content="index,follow,max-image-preview:large">', '<meta name="robots" content="noindex">').replace('<meta name="robots" content="noindex,follow">', '<meta name="robots" content="noindex">') + body
 
 
 # ---------------------------------------------------------------- images
@@ -606,7 +600,7 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteRule ^(_src|_data|\.git|\.github)(/|$) - [F,L]
-RewriteRule ^(build\.py|README\.md)$ - [F,L]
+RewriteRule ^(build\.py|README\.md|INSTRUCTIONS\.txt)$ - [F,L]
 </IfModule>
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/rss+xml application/javascript application/json image/svg+xml application/manifest+json
@@ -654,7 +648,7 @@ def main():
     if "--check" in sys.argv:
         return
     if "yourdomain.com" in cfg["siteUrl"]:
-        print("! WARNING: set siteUrl in _data/config.json to your real subdomain for correct SEO links")
+        print("! siteUrl is still a placeholder: pages are marked noindex until you set your real subdomain in _data/config.json")
 
     cats = db["categories"]
     css = min_css(open(os.path.join(SRC, "styles.css"), encoding="utf-8").read())

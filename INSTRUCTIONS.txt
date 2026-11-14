@@ -1,0 +1,89 @@
+=====================================================
+ GAPHUNTER — HOSTING PAR LAGANE KI STEP-BY-STEP GUIDE
+=====================================================
+
+Zaroori baat:
+- Har Monday naye ideas sirf GitHub repo (MS-Bytes/GapHunter) mein aate hain.
+- ZIP upload (Hissa A) se site turant chal jayegi, lekin weekly update khud nahi aayega.
+- Weekly update khud aaye, is ke liye Hissa B (GitHub Auto Deploy) zaroor karein.
+- Behtar tareeqa: seedha Hissa B karein. ZIP sirf jaldi test ke liye hai.
+
+
+-----------------------------------------------------
+ HISSA A — ZIP SE UPLOAD (jaldi chalane ke liye)
+-----------------------------------------------------
+1. Hostinger hPanel kholein → Websites → apni website → Manage.
+2. Domains → Subdomains mein jayen.
+3. Subdomain ka naam likhein (maslan: ideas) → Create.
+4. Files → File Manager kholein.
+5. public_html ke andar subdomain wala folder kholein (maslan: public_html/ideas).
+6. Agar wahan default.php ya index.php pari ho to delete kar dein.
+7. Upar "Upload" dabayein → GapHunter-website.zip upload karein.
+8. Zip file par right-click → Extract → isi folder mein extract karein.
+9. Check karein ke index.html, ideas, category, assets, og folders
+   seedhe isi folder mein hain (kisi aur folder ke andar nahi).
+10. Zip file delete kar dein.
+11. Security → SSL mein ja kar is subdomain ke liye SSL install karein.
+12. 10–30 minute baad https://ideas.aapkadomain.com browser mein kholein.
+
+Note: File Manager mein ".htaccess" chhupi file hoti hai. Agar nazar na aaye
+to File Manager ki Settings mein "Show hidden files" on karein.
+
+
+-----------------------------------------------------
+ HISSA B — GITHUB AUTO DEPLOY (har Monday khud update)
+-----------------------------------------------------
+1. Agar Hissa A kiya tha to subdomain folder ki saari files delete kar dein
+   (folder bilkul khaali hona chahiye).
+2. hPanel → Websites → Manage → Advanced → GIT kholein.
+3. "Create a New Repository" mein bharein:
+   - Repository:  git@github.com:MS-Bytes/GapHunter.git
+   - Branch:      main
+   - Directory:   subdomain wala folder (maslan: ideas)
+4. Repo private hai, is liye:
+   a. Isi GIT page par Hostinger jo "SSH Key" dikhata hai, usay copy karein.
+   b. GitHub → MS-Bytes/GapHunter → Settings → Deploy keys → Add deploy key.
+   c. Title: Hostinger, Key: paste karein → Add key.
+5. Hostinger mein "Create" dabayein. Files khud aa jayengi.
+6. Usi GIT page par "Auto Deployment" on karein → Webhook URL copy karein.
+7. GitHub → MS-Bytes/GapHunter → Settings → Webhooks → Add webhook:
+   - Payload URL:   jo URL copy kiya
+   - Content type:  application/json
+   - Event:         Just the push event
+   → Add webhook.
+8. SSL on karein (Security → SSL).
+9. Ab har Monday subah ~8 baje naye ideas khud site par aa jayenge.
+
+
+-----------------------------------------------------
+ HISSA C — SUBDOMAIN FINAL HONE PAR (Google ke liye zaroori)
+-----------------------------------------------------
+Abhi site mein address "ideas.yourdomain.com" likha hai, is liye Google
+isay index nahi karega (yeh jaan boojh kar band rakha gaya hai).
+
+1. Subdomain final hote hi Claude ko batayein (maslan: ideas.vediotech.com).
+2. Claude config mein address daal kar GitHub par push karega.
+3. Hissa B kiya hua hai to site khud update ho jayegi.
+   Sirf Hissa A kiya hai to Claude ki di hui nayi ZIP dobara upload karein.
+
+
+-----------------------------------------------------
+ HISSA D — GOOGLE MEIN LANA (Hissa C ke baad)
+-----------------------------------------------------
+1. https://search.google.com/search-console kholein → Add property.
+2. "URL prefix" mein https://ideas.aapkadomain.com daalein.
+3. Verify karein (HTML tag ya DNS ka tareeqa).
+4. Sitemaps → https://ideas.aapkadomain.com/sitemap.xml submit karein.
+5. Yahi kaam https://www.bing.com/webmasters par bhi karein.
+6. Speed check: https://pagespeed.web.dev par apna link test karein.
+
+
+-----------------------------------------------------
+ MASLE AUR UNKA HAL
+-----------------------------------------------------
+- Site par "403 Forbidden":  index.html sahi folder mein nahi hai. Hissa A step 9 dobara check karein.
+- Idea page par "404":       .htaccess upload nahi hui. Hidden files on kar ke check karein.
+- Design toota hua:          browser cache saaf karein (Ctrl + F5).
+- Monday update nahi aaya:   GitHub repo mein check karein ke naya commit aaya ya nahi.
+                             Commit aaya hai lekin site nahi badli → Hostinger GIT page par "Deploy" dabayein.
+- Koi idea khud badalna ho:  Claude ko batayein, woh _data/ideas.json edit kar ke push kar dega.
